@@ -39,14 +39,39 @@ conda install -c pytorch3d pytorch3d=0.7.0 -y
 ```
 
 # How to run
-When using `AnTao350M` dataset, run:
+
+## Classification
+When using `AnTao420M` dataset, run:  
+train:
+```bash
+python train_modelnet.py datasets=modelnet_AnTao350M usr_config=YOUR/USR/CONFIG/PATH
+```
+test:
+```bash
+python test_modelnet.py datasets=modelnet_AnTao350M usr_config=YOUR/USR/CONFIG/PATH
+```
+
+## Segmentation
+When using `AnTao350M` dataset, run:  
+train:
 ```bash
 python train_shapenet.py datasets=shapenet_AnTao350M usr_config=YOUR/USR/CONFIG/PATH
 ```
-When using `Yi650M` dataset, run:
+test:
+```bash
+python test_shapenet.py datasets=shapenet_AnTao350M usr_config=YOUR/USR/CONFIG/PATH
+```
+
+When using `Yi650M` dataset, run:  
+train: 
 ```bash
 python train_shapenet.py datasets=shapenet_Yi650M usr_config=YOUR/USR/CONFIG/PATH
 ```
+test: 
+```bash
+python test_shapenet.py datasets=shapenet_Yi650M usr_config=YOUR/USR/CONFIG/PATH
+```
+
 
 # About configuration files
 The train/test script will read the default configuration file (`./configs/default.yaml`) and the user specified 
@@ -68,6 +93,11 @@ python train_shapenet.py datasets=shapenet_AnTao350M usr_config=YOUR/USR/CONFIG/
 ```
 Check the default configuration file for all legal hyper-parameters.
 
+## examples of user configuration
+classification: `./configs/usr_config_cls.yaml`  
+segmentation: `./configs/usr_config_seg.yaml`
+
+
 # WandB (Weights and biases)
 We use wandb to log all experiment results. It is an amazing logger for deep learning. If you want to disable the wandb 
 logger, do it in your usr config:
@@ -88,3 +118,4 @@ wandb:
   project: pct  # the name of your project
   name: my_experiment  # the name of your run
 ```
+Note: If you want to test or visualize the results, wandb.enable must be set to true during training and testing

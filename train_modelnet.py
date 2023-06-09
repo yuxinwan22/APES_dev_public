@@ -319,7 +319,7 @@ def train(local_rank, config):  # the first arg must be local rank for the sake 
                 scaler.update()
             else:
                 preds = my_model(samples)
-                train_loss = loss_fn(preds, cls_labels)
+                train_loss = loss_fn(preds, cls_labels)  + config.train.consistency_loss_factor * consistency_loss(my_model.module.block.res_link_list)
                 train_loss.backward()
                 # log debug information
                 if config.train.debug.enable:
