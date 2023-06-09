@@ -1,3 +1,18 @@
+# APES: Attention-based Point Cloud Edge Sampling
+
+<p>
+<a href="https://arxiv.org/pdf/2302.14673.pdf">
+    <img src="https://img.shields.io/badge/PDF-arXiv-brightgreen" /></a>
+<a href="https://junweizheng93.github.io/publications/APES/APES.html">
+    <img src="https://img.shields.io/badge/Project-Homepage-red" /></a>
+<a href="https://pytorch.org/">
+    <img src="https://img.shields.io/badge/Framework-PyTorch-orange" /></a>
+<a href="https://mmengine.readthedocs.io/en/latest/">
+    <img src="https://img.shields.io/badge/Framework-MMEngine-ff69b4" /></a>
+<a href="https://github.com/JunweiZheng93/APES/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" /></a>
+</p>
+
 # Copyright
 original article: Attention-Based Point Cloud Edge Sampling https://arxiv.org/pdf/2302.14673.pdf  
 Author: Chengzhi Wu, Junwei Zheng, Julius Pfrommer, Jurgen Beyerer  
