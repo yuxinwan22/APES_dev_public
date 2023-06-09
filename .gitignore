@@ -28,7 +28,7 @@ venv.bak/
 profile_default/
 ipython_config.py
 
-./datasets/
+datasets/
 results/
 configs/usr/
 wandb/
