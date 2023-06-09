@@ -33,3 +33,6 @@ results/
 configs/usr/
 wandb/
 artifacts/
+
+# __pychache__
+*.pyc
