@@ -1,3 +1,8 @@
+# Copyright
+original article: Attention-Based Point Cloud Edge Sampling https://arxiv.org/pdf/2302.14673.pdf
+Author: Chengzhi Wu, Junwei Zheng, Julius Pfrommer, Jurgen Beyerer
+Code: In order to facilitate subsequent development, according to the request of the original author Chengzhi Wu, the code of JunweiZheng93 is made public and some bugs are fixed.
+Another public version(for test and application): https://github.com/JunweiZheng93/APES#apes-attention-based-point-cloud-edge-sampling
 # Setup
 Python version: 3.9
 ```bash
