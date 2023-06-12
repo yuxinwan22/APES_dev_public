@@ -15,8 +15,11 @@
 
 # Copyright
 original article: Attention-Based Point Cloud Edge Sampling https://arxiv.org/pdf/2302.14673.pdf  
+
 Author: Chengzhi Wu, Junwei Zheng, Julius Pfrommer, Jurgen Beyerer  
-Code: In order to facilitate subsequent development, according to the request of the original author Chengzhi Wu, the code of JunweiZheng93 is made public and some bugs are fixed.  
+
+Code: The original code comes from Chengzhi Wu and Junwei Zheng, some minor modifications are made.   
+
 Another public version(for test and application): https://github.com/JunweiZheng93/APES#apes-attention-based-point-cloud-edge-sampling
 # Setup
 Python version: 3.9
@@ -93,10 +96,24 @@ python train_shapenet.py datasets=shapenet_AnTao350M usr_config=YOUR/USR/CONFIG/
 ```
 Check the default configuration file for all legal hyper-parameters.
 
-## examples of user configuration
+## Examples of user configuration
 classification: `./configs/usr_config_cls.yaml`  
 segmentation: `./configs/usr_config_seg.yaml`
 
+## Visualization
+when you want to visualise the results, please set user config file:
+```yaml
+wandb:
+  enable: true
+test:
+  visualize_preds:
+    enable: true
+  visualize_downsampled_points:
+    enable: true
+  visualize_attention_heatmap:
+    enable: true
+```
+and run ```test_modelnet.py``` or ```test_shapenet.py```
 
 # WandB (Weights and biases)
 We use wandb to log all experiment results. It is an amazing logger for deep learning. If you want to disable the wandb 
